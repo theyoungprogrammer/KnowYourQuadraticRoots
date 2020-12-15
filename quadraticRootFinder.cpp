@@ -7,14 +7,14 @@
 using namespace std;  // using std namespace
 
 float a, b, c, discriminant, realPart, unEqual , rootNum_1, rootNum_2;  // declaring necessary variables for operation
-// I have declared all the variables publicly so that i can be used anywhere in the code inrepective of the scope and functions
+// I have declared all the variables globally so that i can be used anywhere in the code inrepective of the scope and functions
 
 // In this code i have used multiple functions
 
 
 
 //  logical function 
-int quadRoot() 
+void quadRoot() 
 {
     // taking input from the users 
     cout<<"Please enter the co-efficient of X-Square -> ";
@@ -43,7 +43,6 @@ int quadRoot()
                         // here we are taking the root of the discriminant
     cout<<"The Beta root -> "<<rootNum_2<<endl;
 
-    return 0;
     
 }
 // end of logical function
@@ -51,7 +50,7 @@ int quadRoot()
 // i have used three function to make the code more readable
 
 // logical_2 function for if-else and condition statements 
-int conditionFunc()
+void conditionFunc()
 {
     cout<<"the discriminant is -> "<<discriminant<<endl;
     
@@ -61,16 +60,15 @@ int conditionFunc()
     }
 
     // else-if block for unequal roots
-    else if (discriminant >= 1)
+    else if (discriminant > 0)
     {
         cout<<"The roots are 'Real and unequal'"<<endl;
     }
     
-    else // False-block
+    else // False-block --- imagianry block 
     {
         cout<<"The roots are 'Imaginary'"<<endl;
     }
-return 0;
 
 }
 // end of logical or conditional function
@@ -81,9 +79,11 @@ int main()
     
     quadRoot(); // calling logical function for operations
     conditionFunc(); // calling logical_2 function for conditional operations 
-    return 0;
+    return (0);
     // terminating the func
     
 }
 
 // End of the Program
+
+
